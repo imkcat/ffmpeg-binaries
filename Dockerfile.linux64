@@ -4,11 +4,12 @@ WORKDIR /opt/ffmpeg
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+COPY ffmpeg-version /opt/ffmpeg/ffmpeg-version
 RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 RUN apt update && apt install curl -y
-RUN curl -O https://www.ffmpeg.org/releases/ffmpeg-4.4.tar.gz
+RUN curl -O https://www.ffmpeg.org/releases/ffmpeg-`cat ffmpeg-version`.tar.gz
 RUN apt install libsdl2-dev gcc make -y
-RUN tar -xf ffmpeg-4.4.tar.gz
-RUN cd ffmpeg-4.4 && ./configure --disable-x86asm --enable-ffplay && make -j8
+RUN tar -xf ffmpeg-`cat ffmpeg-version`.tar.gz
+RUN cd ffmpeg-`cat ffmpeg-version` && ./configure --disable-x86asm --enable-ffplay && make -j8
 
 CMD tail -f /dev/null

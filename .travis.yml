@@ -4,4 +4,6 @@ services:
   - docker
 
 script:
-  - ./build-linux64.sh
+  - ./make.sh win64
+  - ./make.sh macos64
+  - ./make.sh linux64

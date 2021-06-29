@@ -1,2 +1,2 @@
-# ffmpeg-binaries-docker
-Build ffmpeg binaries using docker
+# ffmpeg-binaries
+FFmpeg binaries for all platforms(Windows, macOS, Linux)
