@@ -1,0 +1,12 @@
+FROM ubuntu:20.04
+
+WORKDIR /opt/ffmpeg
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+RUN apt update && apt install curl -y
+RUN curl -O https://www.ffmpeg.org/releases/ffmpeg-4.4.tar.gz
+RUN apt install libsdl2-dev gcc make -y
+RUN tar -xf ffmpeg-4.4.tar.gz
+RUN cd ffmpeg-4.4 && ./configure --disable-x86asm --enable-ffplay && make -j8
