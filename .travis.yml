@@ -4,6 +4,7 @@ services:
   - docker
 
 before_install:
+  - sudo apt update
   - sudo apt install p7zip-full curl -y
 
 script:
