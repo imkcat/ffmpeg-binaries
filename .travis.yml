@@ -1,7 +1,10 @@
-language: ruby
+dist: focal
 
 services:
   - docker
+
+before_install:
+  - sudo apt install p7zip-full curl
 
 script:
   - ./make.sh win64

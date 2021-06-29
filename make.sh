@@ -1,8 +1,4 @@
 #!/bin/bash
-function install_requirements() {
-    sudo apt install p7zip-full curl
-}
-
 function win64() {
     rm -rf ./downloads/win64*
     curl https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-${ffmpeg_version}-full_build.7z -o ./downloads/win64.7z
