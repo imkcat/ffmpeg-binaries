@@ -10,3 +10,5 @@ RUN curl -O https://www.ffmpeg.org/releases/ffmpeg-4.4.tar.gz
 RUN apt install libsdl2-dev gcc make -y
 RUN tar -xf ffmpeg-4.4.tar.gz
 RUN cd ffmpeg-4.4 && ./configure --disable-x86asm --enable-ffplay && make -j8
+
+CMD tail -f /dev/null
