@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - sudo apt install p7zip-full curl
+  - sudo apt install p7zip-full curl -y
 
 script:
   - ./make.sh win64
