@@ -25,10 +25,10 @@ function macos64() {
     cd $root_path
     rm -rf ./downloads/macos64-*
     curl https://evermeet.cx/ffmpeg/ffmpeg-${ffmpeg_version}.7z -o ./downloads/macos64-ffmpeg.7z
-    curl https://evermeet.cx/ffmpeg/ffprobe-${ffmpeg_version}.7z -o ./downloads/macos64-ffprobe.7z
-    curl https://evermeet.cx/ffmpeg/ffplay-${ffmpeg_version}.7z -o ./downloads/macos64-ffplay.7z
     7z x ./downloads/macos64-ffmpeg.7z -o./downloads/macos64-ffmpeg
+    curl https://evermeet.cx/ffmpeg/ffprobe-${ffmpeg_version}.7z -o ./downloads/macos64-ffprobe.7z
     7z x ./downloads/macos64-ffprobe.7z -o./downloads/macos64-ffprobe
+    curl https://evermeet.cx/ffmpeg/ffplay-${ffmpeg_version}.7z -o ./downloads/macos64-ffplay.7z
     7z x ./downloads/macos64-ffplay.7z -o./downloads/macos64-ffplay
     rm -rf ./binaries/macos64*
     mkdir -p ./binaries/macos64
