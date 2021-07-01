@@ -9,6 +9,7 @@ script:
 deploy:
   provider: releases
   api_key: "$GITHUB_OAUTH_TOKEN"
+  skip_cleanup: true
   file_glob: true
   file:
     - ./binaries/*.zip
