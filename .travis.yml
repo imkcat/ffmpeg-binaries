@@ -13,3 +13,5 @@ deploy:
   file:
     - ./binaries/*.zip
   on.tags: true
+  on: 
+    branch: main
