@@ -12,6 +12,6 @@ deploy:
   file_glob: true
   file:
     - ./binaries/*.zip
-  on.tags: true
   on: 
-    branch: main
+    all_branches: true
+    tags: true
