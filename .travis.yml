@@ -3,11 +3,13 @@ dist: focal
 services:
   - docker
 
-before_install:
-  - sudo apt update
-  - sudo apt install p7zip-full curl -y
-
 script:
-  - ./make.sh win64
-  - ./make.sh macos64
-  - ./make.sh linux64
+  - ./make.sh all
+
+deploy:
+  provider: releases
+  api_key: "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"
+  file_glob: true
+  file:
+    - ./binaries/*.zip
+  on.tags: true
