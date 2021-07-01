@@ -8,7 +8,7 @@ script:
 
 deploy:
   provider: releases
-  api_key: "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"
+  api_key: "$GITHUB_OAUTH_TOKEN"
   file_glob: true
   file:
     - ./binaries/*.zip
