@@ -1,5 +1,7 @@
 # ffmpeg-binaries
 
+![Travis (.org)](https://img.shields.io/travis/ImKcat/ffmpeg-binaries)
+
 Create [FFmpeg](https://ffmpeg.org/) binaries(ffmpeg, ffprobe, ffplay) for all platforms(Windows, macOS, Linux)
 
 ## Getting Started
