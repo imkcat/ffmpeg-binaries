@@ -21,6 +21,10 @@ The binary files will output to `./binaries` path:
 - `./binaries/win64` Binary files
 - `./binaries/win64.zip` Binary files package
 
+### Pre-build binaries
+
+Refer to [release](https://github.com/ImKcat/ffmpeg-binaries/releases) page.
+
 ## Credits
 
 - Windows binaries from [https://www.gyan.dev/ffmpeg/](https://www.gyan.dev/ffmpeg/)
